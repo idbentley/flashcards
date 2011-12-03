@@ -1,0 +1,9 @@
+%h2 Create New Flashcard!
+#new_answer
+	= form_for :answer do
+		%h3 Answer
+		= render @answer.media
+		%h3 Questions
+		= fields_for :question do |question_fields|
+			- logger.debug "Field #{question_fields}"
+			= render question_fields

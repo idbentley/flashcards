@@ -1,0 +1,6 @@
+.media_form
+	= fields_for media do |media_fields|
+		%h4 Media:
+		= media_fields.label :type, "Text" 
+		= media_fields.radio_button :type, "text"
+		= media_fields.text_field :content
